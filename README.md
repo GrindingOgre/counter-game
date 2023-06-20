@@ -1,27 +1,14 @@
 # CounterGame
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
+Benvenuto in CounterGame.
 
-## Development server
+L'esercizio prevede un component padre che contiene un component ChildComponent.
+Il ChildComponent ha al suo interno un contatore che cresce velocemente (+1 ogni 300ms).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Fare in modo che il child component interrompa il contatore ed invii al padre il numero al quale si è fermato [1]
+  Se il numero al quale si è fermato è uguale al numero randomico che il padre aveva deciso, mostrare un messaggio di vittoria.
+  Se il numero non è corretto, mostrare un messaggio di perdita.
 
-## Code scaffolding
+- Aggiungere nel component AppChild un bottone che permette di resettare il gioco, facendo generare un nuovo numero random al component Padre, e facendo ripartire il counter.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[1]: Per interrompere setInterval, richiamare la funzione `clearInterval(...)` dandogli come parametro il risultato ottenuto dalla `setInterval`
